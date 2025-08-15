@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN">
+<head>
+    <!-- 头部信息：包含文档的元数据 -->
+    <meta charset="UTF-8">
+    <!-- 指定字符编码为UTF-8，支持中文显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 视口设置，确保在移动设备上正确显示 -->
+    <title>简单网页示例</title>
+    <!-- 网页标题，将显示在浏览器标签页上 -->
+    
+    <!-- 内部CSS样式 -->
+    <style>
+        /* 重置默认边距和内边距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* 页面整体样式 */
+        body {
+            font-family: Arial, sans-serif; /* 字体设置 */
+            line-height: 1.6; /* 行高设置，提高可读性 */
+            color: #333; /* 文字颜色 */
+            max-width: 800px; /* 最大宽度，使内容居中显示 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px; /* 内边距 */
+        }
+        
+        /* 标题样式 */
+        h1 {
+            color: #2c3e50; /* 深蓝色 */
+            margin-bottom: 20px; /* 底部外边距 */
+            text-align: center; /* 居中对齐 */
+        }
+        
+        /* 段落样式 */
+        p {
+            margin-bottom: 15px; /* 底部外边距 */
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            display: inline-block; /* 使按钮可以设置宽高 */
+            background: #3498db; /* 蓝色背景 */
+            color: white; /* 白色文字 */
+            padding: 10px 15px; /* 内边距 */
+            border: none; /* 去掉边框 */
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            font-size: 16px; /* 字体大小 */
+        }
+        
+        /* 按钮悬停效果 */
+        .btn:hover {
+            background: #2980b9; /* 稍深的蓝色 */
+        }
+        
+        /* 隐藏的内容区域 */
+        #hiddenContent {
+            display: none; /* 默认隐藏 */
+            margin-top: 20px; /* 顶部外边距 */
+            padding: 15px; /* 内边距 */
+            border: 1px solid #ddd; /* 灰色边框 */
+            border-radius: 5px; /* 圆角 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面内容 -->
+    <h1>欢迎来到我的简单网页</h1>
+    
+    <p>这是一个包含HTML、CSS和JavaScript的简单网页示例。</p>
+    
+    <p>点击下面的按钮可以显示或隐藏额外内容：</p>
+    
+    <!-- 按钮，点击时触发toggleContent函数 -->
+    <button class="btn" onclick="toggleContent()">点击我</button>
+    
+    <!-- 隐藏的内容区域 -->
+    <div id="hiddenContent">
+        <h2>隐藏的内容</h2>
+        <p>这部分内容默认是隐藏的，点击按钮可以显示或隐藏它。</p>
+        <p>这个交互效果是通过JavaScript实现的。</p>
+    </div>
+    
+    <!-- JavaScript代码 -->
+    <script>
+        // 定义一个函数，用于显示或隐藏内容
+        function toggleContent() {
+            // 获取隐藏内容的元素
+            const content = document.getElementById('hiddenContent');
+            
+            // 检查元素当前是否显示
+            if (content.style.display === 'none' || content.style.display === '') {
+                // 如果是隐藏的，则显示它
+                content.style.display = 'block';
+            } else {
+                // 如果是显示的，则隐藏它
+                content.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
